@@ -13,11 +13,25 @@
     </script>
 
 
+    <script>
+      function validataForm(){
+        var n=document.form1.floatingInput;
+        if(n.value==""){
+          alert("제목을 입력하세요.");
+          n.focus();
+          return false;
+        }
+        var t;
+        var l;
+
+      }
+    </script>
+
   </head>
 <body>
     
     <main class="form-signin">
-        <form>
+        <form name="form1" action="form2_ok.php" onsubmit="return validataForm()" method="post">
           
           <h1 class="h3 mb-3 fw-normal">추가할 어류</h1>
       
