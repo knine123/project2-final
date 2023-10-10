@@ -10,35 +10,31 @@
     <script>
       function validataForm(){
         var n=document.form1.floatingInput;
+        var t=document.form1.floatingPassword;
+        var l=document.form1.floatingplace;
         if(n.value==""){
           alert("제목을 입력하세요.");
           n.focus();
           return false;
         }
-        var t=document.form1.floatingPassword;
-        if(t.value==""){
+        else if(t.value==""){
           alert("시기를 입력하세요");
           t.focus();
           return false;
         }
-
-        var l=document.form1.floatingplace;
-        if(l.value==""){
+        else if(l.value==""){
           alert("낚이는 위치를 입력하세요.");
           return false;
         }
-
-      }
-
-    </script>
-
-    <script>
-      function clickt(obj){
-        if(validataForm()!=false){
-        alert("게시물이 추가됩니다.");
+        else{
+          alert("게시물이 추가됩니다.");
         }
+
       }
+
     </script>
+
+
 
 
   </head>
