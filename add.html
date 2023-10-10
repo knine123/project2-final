@@ -8,10 +8,11 @@
 
 
     <script>
-      function validataForm(obj){
+      function validataForm(){
         var n=document.form1.floatingInput;
         var t=document.form1.floatingPassword;
         var l=document.form1.floatingplace;
+
         if(n.value==""){
           alert("제목을 입력하세요.");
           n.focus();
@@ -26,22 +27,19 @@
           alert("낚이는 위치를 입력하세요.");
           return false;
         }
-        else{
-          alert("게시물이 추가됩니다.");
-        }
 
       }
-
+      function clickt(obj){
+        if(validataForm()!=false)
+        alert("게시물이 추가됩니다.");
+      }
     </script>
-
-
-
 
   </head>
 <body>
     
     <main class="form-signin">
-        <form name="form1" method="post">
+        <form name="form1"  onsubmit="return validataForm()" method="post">
           
           <h1 class="h3 mb-3 fw-normal">추가할 어류</h1>
       
@@ -89,7 +87,7 @@
             <label for="floatingPassword">날씨</label>
           </div>
 
-          <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="validataForm(this)" >추가</button>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="clickt(this)">추가</button>
           
         </form>
       </main>
