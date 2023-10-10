@@ -15,8 +15,18 @@
           n.focus();
           return false;
         }
-        var t;
-        var l;
+        var t=document.form1.floatingPassword;
+        if(t.value==""){
+          alert("시기를 입력하세요");
+          t.focus();
+          return false;
+        }
+
+        var l=document.form1.floatingplace;
+        if(l.value==""){
+          alert("낚이는 위치를 입력하세요.");
+          return false;
+        }
 
       }
       function clickt(obj){
