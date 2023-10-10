@@ -32,7 +32,6 @@
       function clickt(obj){
         if(validataForm()!=false)
         alert("게시물이 추가됩니다.");
-        location.href=index.html;
       }
     </script>
 
@@ -52,7 +51,7 @@
           <br>
 
           <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="four">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="four">
             <label for="floatingPassword">시기</label>
           </div>
       
@@ -88,7 +87,7 @@
             <label for="floatingPassword">날씨</label>
           </div>
 
-          <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="clickt(this)">추가</button>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="clickt(this)" onclick="location.href='index.html'">추가</button>
           
         </form>
       </main>
