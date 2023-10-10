@@ -27,19 +27,19 @@
           alert("낚이는 위치를 입력하세요.");
           return false;
         }
+        else{
+          alert("게시물이 추가됩니다.");
+        }
 
       }
-      function clickt(obj){
-        if(validataForm()!=false)
-        alert("게시물이 추가됩니다.");
-      }
+
     </script>
 
   </head>
 <body>
     
     <main class="form-signin">
-        <form name="form1"  onsubmit="return validataForm()" method="post">
+        <form name="form1" action="form_ok.php" onsubmit="return validataForm()" method="post">
           
           <h1 class="h3 mb-3 fw-normal">추가할 어류</h1>
       
@@ -87,7 +87,7 @@
             <label for="floatingPassword">날씨</label>
           </div>
 
-          <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="clickt(this)">추가</button>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="location.href='index.html'">추가</button>
           
         </form>
       </main>
